@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scan Result</title>
+</head>
+<body>
+  <h2>Uploaded Image</h2>
+  <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="uploaded">
+  <p>(This is where expiry scan results will appear later.)</p>
+  <a href="/">Upload another</a>
+</body>
+</html>
