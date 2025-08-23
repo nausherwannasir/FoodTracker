@@ -5,8 +5,14 @@
 </head>
 <body>
   <h2>Uploaded Image</h2>
-  <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="uploaded">
-  <p>(This is where expiry scan results will appear later.)</p>
+  <div style="max-width: 400px; margin: 20px auto; text-align: center;">
+    <img src="{{ url_for('uploaded_file', filename=filename) }}"
+         alt="uploaded image"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc; border-radius: 8px; padding: 5px;">
+  </div>
+  <h3>Detected Expiry Date</h3>
+  <p>{{ expiry_date }}</p>
+
   <a href="/">Upload another</a>
 </body>
 </html>
